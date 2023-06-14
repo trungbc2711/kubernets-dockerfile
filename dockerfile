@@ -1,7 +1,7 @@
 FROM thehiveproject/cortex:latest
 RUN apt-get update && apt-get install -y \
     git \
-    vi \
+    vi
 WORKDIR /opt
 RUN git clone https://github.com/TheHive-Project/Cortex-Analyzers
 WORKDIR cd /etc/cortex
