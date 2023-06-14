@@ -4,5 +4,6 @@ RUN apt-get update && apt-get install -y \
     vim
 WORKDIR /opt
 RUN git clone https://github.com/TheHive-Project/Cortex-Analyzers
-WORKDIR cd /etc/cortex
-RUN git clone https://github.com/trungbc2711/kubernets-dockerfile/blob/main/application.conf
+WORKDIR /tmp
+RUN git clone https://github.com/trungbc2711/kubernets-dockerfile
+RUN cp ./kubernets-dockerfile/application.conf /etc/cortex/application.conf
